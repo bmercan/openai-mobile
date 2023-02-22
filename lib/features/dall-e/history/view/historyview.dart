@@ -7,7 +7,8 @@ import '../../../../global/features.dart';
 import 'historydetails.dart';
 
 class DallEHistoryView extends StatelessWidget {
-  const DallEHistoryView({super.key});
+  // ignore: prefer_const_constructors_in_immutables
+  DallEHistoryView({super.key});
 
   @override
   Widget build(BuildContext context) {

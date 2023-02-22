@@ -7,7 +7,8 @@ import '../../../../global/features.dart';
 import 'historydetails.dart';
 
 class GPTHistoryView extends StatelessWidget {
-  const GPTHistoryView({super.key});
+  // ignore: prefer_const_constructors_in_immutables
+  GPTHistoryView({super.key});
 
   @override
   Widget build(BuildContext context) {

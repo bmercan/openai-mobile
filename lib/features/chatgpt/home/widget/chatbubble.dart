@@ -20,14 +20,16 @@ class ChatBubble extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
           decoration: BoxDecoration(
             color: sender == "Me"
-                ? Colors.white
+                ? Theme.of(context).colorScheme.onSurface
                 : ColorConstants.instance.kSecondaryColor,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
             text,
             style: TextStyle(
-              color: sender == "Me" ? Colors.black : Colors.white,
+              color: sender == "Me"
+                  ? Theme.of(context).colorScheme.onInverseSurface
+                  : Colors.white,
               fontFamily: 'Roboto',
             ),
           ),

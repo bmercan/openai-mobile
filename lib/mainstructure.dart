@@ -12,7 +12,10 @@ class MainStructure extends StatefulWidget {
 
 class _MainStructureState extends State<MainStructure> {
   int _selectedIndex = 0;
-  final List<Widget> _pages = [DallEHomeView(), const DallEHistoryView()];
+  final List<Widget> _pages = [
+    DallEHomeView(),
+    DallEHistoryView(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -47,8 +47,8 @@ class GPTHomeView extends StatelessWidget {
                         text: _controller.text, sender: "Me");
                     _controller.text = "";
                   },
-                  icon:
-                      const Icon(Icons.arrow_forward_ios, color: Colors.white))
+                  icon: Icon(Icons.arrow_forward_ios,
+                      color: Theme.of(context).colorScheme.onSurface))
             ],
           ),
         ],
