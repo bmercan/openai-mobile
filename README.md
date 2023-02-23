@@ -1,16 +1,12 @@
-# mobile_gpt
+# Dall-E 2 Mobile App
 
-A new Flutter project.
+App for Dall-E 2, actually i meant to build Chat-GPT mobile app but when i started to this project there is no API for Chat-GPT so i turned the project to Dall-E 2
 
-## Getting Started
+## Notes
 
-This project is a starting point for a Flutter application.
+There are no any purpose to build this app for me, Its just trying something new, in this case its just practice for Provider.
 
-A few resources to get you started if this is your first Flutter project:
+### Before You Start
+You have to pass your [OpenAI API Key](https://platform.openai.com/account/api-keys) to here [lib/global/app_constants.dart](https://github.com/bmercan/dall-e-mobile/blob/main/lib/global/app_constants.dart)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### I would love to any feedback for improve myself. Please feel free to show my mistakes and best practices 
