@@ -19,4 +19,4 @@ You have to pass your [OpenAI API Key](https://platform.openai.com/account/api-k
 #### I would love to any feedback for improve myself. Please feel free to show my mistakes and best practices 
 <img width="1018" alt="all" src="https://user-images.githubusercontent.com/78664137/220793976-90c78771-db73-49f5-97f1-4ccb7baa4933.png">
 
-<img width="1018" alt="all" src="https://raw.githubusercontent.com/bmercan/mobile-gpt/main/chatgpt.png?token=GHSAT0AAAAAABY65U5GG3F62THM6PK3G6X2ZAXA7ZA">
+<img width="1018" alt="all" src="https://user-images.githubusercontent.com/78664137/226187021-261fb1d7-dba6-4f9a-8cf0-a25c780748c7.png">
