@@ -21,9 +21,12 @@ class DallEHomeView extends StatelessWidget {
                 child: TextField(
                   enabled: !context.watch<DallEPromptService>().isLoading,
                   controller: _controller,
-                  decoration: const InputDecoration(
-                    hintText: "Prompt",
-                  ),
+                  maxLines: null,
+                  decoration: InputDecoration(
+                      hintText: "Prompt",
+                      suffixIcon: IconButton(
+                          onPressed: _controller.clear,
+                          icon: const Icon(Icons.close))),
                 ),
               ),
               ElevatedButton(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_gpt/core/services/chatgpt_prompt_service.dart';
+import 'package:mobile_gpt/features/landing/view/landingview.dart';
 import 'package:provider/provider.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'core/hive/hive_chat_prompt_model.dart';
@@ -6,8 +8,8 @@ import 'core/hive/chat_prompt_model.dart';
 import 'core/hive/hive_image_prompt_model.dart';
 import 'core/services/dalle_prompt_service.dart';
 import 'core/services/db_service.dart';
-import 'mainstructure.dart';
 import 'global/themes.dart';
+import 'mainstructure.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -23,16 +25,20 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => DallEPromptService()),
+        ChangeNotifierProvider(create: (context) => ChatGPTPromptService()),
         ChangeNotifierProvider(create: (context) => LocalDBService()),
       ],
       builder: (context, child) {
         return MaterialApp(
+          routes: {
+            '/': (context) => const LandingView(),
+            '/mainStructure': (context) => const MainStructure(),
+          },
           debugShowCheckedModeBanner: false,
-          title: 'Dall-E 2',
-          themeMode: ThemeMode.system,
-          theme: MyThemes.lightTheme,
-          darkTheme: MyThemes.darkTheme,
-          home: const MainStructure(),
+          title: 'Mobile-GPT',
+          themeMode: ThemeMode.light,
+          theme: MyTheme.lightTheme,
+          darkTheme: MyTheme.darkTheme,
         );
       },
     );

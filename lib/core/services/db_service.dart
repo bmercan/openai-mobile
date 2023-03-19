@@ -9,8 +9,6 @@ import '../hive/hive_chat_prompt_model.dart';
 import '../hive/hive_image_prompt_model.dart';
 
 class LocalDBService extends ChangeNotifier {
-  final List<ChatPromptModel> _promptChat = [];
-  List<ChatPromptModel> get chat => _promptChat;
   Box<HiveChatPromptModel> get chatHistory => _chatBox;
   Box<HiveImagePromptModel> get imageHistory => _imageBox;
 
@@ -30,20 +28,12 @@ class LocalDBService extends ChangeNotifier {
   /////////////////////////////////
   // Saves Chat History To Hive //
   ///////////////////////////////
-  Future<void> saveChatHistory({required String title}) async {
-    HiveChatPromptModel hivePromptModel = HiveChatPromptModel(
-        title: title, date: DateTime.now(), chat: _promptChat);
+  Future<bool> saveChatHistory(
+      {required String title, required List<ChatPromptModel> chat}) async {
+    HiveChatPromptModel hivePromptModel =
+        HiveChatPromptModel(title: title, date: DateTime.now(), chat: chat);
     await _chatBox.add(hivePromptModel);
-  }
-
-  /////////////////////////////////
-  // Saves Chat History To Hive //
-  ///////////////////////////////
-  void sendNewTextToChatGPT({required String text, required String sender}) {
-    ChatPromptModel prompt =
-        ChatPromptModel(text: text, sender: sender, date: DateTime.now());
-    _promptChat.add(prompt);
-    notifyListeners();
+    return true;
   }
 
   /////////////////////////////

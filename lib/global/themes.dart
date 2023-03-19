@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class MyThemes {
+class MyTheme {
   static final darkTheme = ThemeData(
     progressIndicatorTheme:
         const ProgressIndicatorThemeData(circularTrackColor: Colors.black),

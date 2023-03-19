@@ -25,12 +25,8 @@ class PromptImageWidget extends StatelessWidget {
                 textAlign: TextAlign.center,
                 text: TextSpan(
                   children: [
-                    TextSpan(
-                        text: "Type your PROMPT",
-                        style: Theme.of(context).textTheme.bodyMedium),
-                    TextSpan(
-                        text: "\ne.g. ",
-                        style: Theme.of(context).textTheme.bodyMedium),
+                    const TextSpan(text: "Type your PROMPT"),
+                    const TextSpan(text: "\ne.g. "),
                     TextSpan(
                         text: "A cute baby sea otter",
                         style: Theme.of(context)

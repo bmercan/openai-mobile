@@ -8,7 +8,7 @@ class ColorConstants {
   final kPrimaryLightColor = const Color(0xff77E2FE);
 
   final kPrimaryColor =
-      Colors.black; // Color(0xff1d1ce4); //const Color(0xff4791f2);
+      Colors.red; // Color(0xff1d1ce4); //const Color(0xff4791f2);
   final kSecondaryColor = const Color(0xff20366b);
   final kTextColor = const Color(0xff39425c);
   final kPaleBackground = Colors.grey.shade100;

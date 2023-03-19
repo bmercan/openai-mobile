@@ -11,24 +11,24 @@ class ChatBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment:
-          sender == "Me" ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+          sender == "user" ? CrossAxisAlignment.end : CrossAxisAlignment.start,
       children: [
         Container(
-          margin: sender == "Me"
+          margin: sender == "user"
               ? const MarginConstant.chatBubbleUser()
               : const MarginConstant.chatBubbleGPT(),
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
           decoration: BoxDecoration(
-            color: sender == "Me"
-                ? Theme.of(context).colorScheme.onSurface
+            color: sender == "user"
+                ? Theme.of(context).colorScheme.inverseSurface
                 : ColorConstants.instance.kSecondaryColor,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
             text,
             style: TextStyle(
-              color: sender == "Me"
-                  ? Theme.of(context).colorScheme.onInverseSurface
+              color: sender == "user"
+                  ? Theme.of(context).colorScheme.surface
                   : Colors.white,
               fontFamily: 'Roboto',
             ),

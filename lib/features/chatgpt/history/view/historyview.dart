@@ -7,8 +7,7 @@ import '../../../../global/features.dart';
 import 'historydetails.dart';
 
 class GPTHistoryView extends StatelessWidget {
-  // ignore: prefer_const_constructors_in_immutables
-  GPTHistoryView({super.key});
+  const GPTHistoryView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +24,10 @@ class GPTHistoryView extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => HistoryDetails(model: promptModel))),
             title: Text(
-              "$promptId ${promptModel.title!}",
+              promptModel.title!,
             ),
-            subtitle: ListTile(
-              title: Text(
-                promptModel.chat!.last.text!,
-              ),
+            subtitle: Text(
+              promptModel.chat!.last.text!,
             ),
             trailing: IconButton(
                 onPressed: () {
